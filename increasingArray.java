@@ -12,13 +12,13 @@ public class increasingArray {
         sc.close();
     }
 
-    static int numMoves(int n, int[] arr) {
+    static long numMoves(int n, int[] arr) {
         if(n==0) return 0;
-        int moves = 0;
+        long moves = 0;
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] < arr[i - 1]) {
                 moves += arr[i - 1] - arr[i];
-                arr[i] = arr[i - 1] + 1;
+                arr[i] = arr[i - 1];
             }
         }
         return moves;
