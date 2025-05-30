@@ -27,6 +27,7 @@ public class Main {
             }
         }
 
-        return Math.max(max, count);
+        max = Math.max(max, count);
+        return max;
     }
 }
